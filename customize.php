@@ -16,8 +16,8 @@ $navigation[6] = array('href' => 'customize.php', 'caption' => 'Customize', 'cla
 $template = $twig->loadTemplate('customize.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'customize.html');
+//renderHTML($buffer,'customize.html');
 
-renderPDF($buffer,'customize.pdf');
+//renderPDF($buffer,'customize.pdf');
 
 echo $buffer;

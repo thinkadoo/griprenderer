@@ -16,8 +16,8 @@ $navigation[5] = array('href' => 'javascript.php', 'caption' => 'JavaScript', 'c
 $template = $twig->loadTemplate('javascript.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'javascript.html');
+//renderHTML($buffer,'javascript.html');
 
-renderPDF($buffer,'javascript.pdf');
+//renderPDF($buffer,'javascript.pdf');
 
 echo $buffer;

@@ -17,8 +17,8 @@ $template = $twig->loadTemplate('getting-started.html');
 
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'getting-started.html');
+//renderHTML($buffer,'getting-started.html');
 
-renderPDF($buffer,'getting-started.pdf');
+//renderPDF($buffer,'getting-started.pdf');
 
 echo $buffer;

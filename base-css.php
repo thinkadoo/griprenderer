@@ -17,8 +17,8 @@ $navigation[3] = array('href' => 'base-css.php', 'caption' => 'Base CSS', 'class
 $template = $twig->loadTemplate('base-css.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'base-css.html');
+//renderHTML($buffer,'base-css.html');
 
-renderPDF($buffer,'base-css.pdf');
+//renderPDF($buffer,'base-css.pdf');
 
 echo $buffer;

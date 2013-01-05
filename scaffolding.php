@@ -16,8 +16,8 @@ $navigation[2] = array('href' => 'scaffolding.php', 'caption' => 'Scaffolding', 
 $template = $twig->loadTemplate('scaffolding.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'scaffolding.html');
+//renderHTML($buffer,'scaffolding.html');
 
-renderPDF($buffer,'scaffolding.pdf');
+//renderPDF($buffer,'scaffolding.pdf');
 
 echo $buffer;

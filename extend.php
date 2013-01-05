@@ -13,8 +13,8 @@ require("lib/utilities.php");
 $template = $twig->loadTemplate('extend.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'extend.html');
+//renderHTML($buffer,'extend.html');
 
-renderPDF($buffer,'extend.pdf');
+//renderPDF($buffer,'extend.pdf');
 
 echo $buffer;

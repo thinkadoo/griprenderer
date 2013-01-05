@@ -17,8 +17,8 @@ $navigation[4] = array('href' => 'components.php', 'caption' => 'Components', 'c
 $template = $twig->loadTemplate('components.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation));
 
-renderHTML($buffer,'components.html');
+//renderHTML($buffer,'components.html');
 
-renderPDF($buffer,'components.pdf');
+//renderPDF($buffer,'components.pdf');
 
 echo $buffer;

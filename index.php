@@ -21,8 +21,8 @@ $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'act
 $template = $twig->loadTemplate('index.html');
 $buffer = $template->render(array('name' => $name, 'navigation' => $navigation, 'messages' => $messages));
 
-renderHTML($buffer,'index.html');
+//renderHTML($buffer,'index.html');
 
-renderPDF($buffer,'index.pdf');
+//renderPDF($buffer,'index.pdf');
 
 echo $buffer;
