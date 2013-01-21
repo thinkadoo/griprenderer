@@ -38,3 +38,33 @@ function renderPDF($buffer,$fileName){
     $mpdf->Output($pdfFolderLocation . $fileName,'F');
 
 }
+
+require_once("lib/lessc/lessc.inc.php");
+
+function autoCompileBootstrap($fileNames) {
+
+    $less = new lessc;
+
+    //$less->setFormatter("compressed");
+    $less->setFormatter("classic");
+
+    foreach($fileNames as $fileName){
+
+        $inputFile = __DIR__ .'/../assets/less/'.$fileName.'.less';
+        $outputFile = __DIR__ .'/../assets/css/'.$fileName.'.css';
+        $cacheFile = __DIR__ .'/../assets/cache/'.$fileName.'.cache';
+
+        if (file_exists($cacheFile)) {
+            $cache = unserialize(file_get_contents($cacheFile));
+        } else {
+            $cache = $inputFile;
+        }
+
+        $newCache = $less->cachedCompile($cache);
+
+        if (!is_array($cache) || $newCache["updated"] > $cache["updated"]) {
+            file_put_contents($cacheFile, serialize($newCache));
+            file_put_contents($outputFile, $newCache['compiled']);
+        }
+    }
+}

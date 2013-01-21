@@ -21,4 +21,7 @@ $buffer = $template->render(array('name' => $name, 'navigation' => $navigation))
 
 //renderPDF($buffer,'base-css.pdf');
 
+$fileNames = array("bootstrap","responsive");
+autoCompileBootstrap($fileNames);
+
 echo $buffer;

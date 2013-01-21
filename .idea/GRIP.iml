@@ -10,10 +10,10 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar:///Applications/MAMP/htdocs/oop/composer.phar" />
+          <root url="phar:///Applications/MAMP/htdocs/griprenderer/composer.phar" />
         </CLASSES>
         <SOURCES>
-          <root url="phar:///Applications/MAMP/htdocs/oop/composer.phar" />
+          <root url="phar:///Applications/MAMP/htdocs/griprenderer/composer.phar" />
         </SOURCES>
       </library>
     </orderEntry>
