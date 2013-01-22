@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14902ca9-8ac7-4a56-92cb-ec822b9519e0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/GripModel.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/outputfile.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base-css.html" afterPath="$PROJECT_DIR$/templates/base-css.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/components.html" afterPath="$PROJECT_DIR$/templates/components.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/customize.html" afterPath="$PROJECT_DIR$/templates/customize.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/extend.html" afterPath="$PROJECT_DIR$/templates/extend.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.html" afterPath="$PROJECT_DIR$/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/getting-started.html" afterPath="$PROJECT_DIR$/templates/getting-started.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.html" afterPath="$PROJECT_DIR$/templates/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/javascript.html" afterPath="$PROJECT_DIR$/templates/javascript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/scaffolding.html" afterPath="$PROJECT_DIR$/templates/scaffolding.html" />
     </list>
     <ignored path="OOP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,20 +28,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="827" selection-end="827" vertical-scroll-proportion="0.36253777">
+            <state line="19" column="2" selection-start="459" selection-end="459" vertical-scroll-proportion="0.19383697">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <file leaf-file-name="Database.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="2180" selection-end="2180" vertical-scroll-proportion="-33.125">
-              <folding />
+            <state line="24" column="21" selection-start="363" selection-end="367" vertical-scroll-proportion="-15.0">
+              <folding>
+                <element signature="e#6#100#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GripModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/GripModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="39" selection-start="388" selection-end="388" vertical-scroll-proportion="-15.625">
+              <folding>
+                <element signature="e#6#100#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,10 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/examples/marketing-alternate.html" />
-        <option value="$PROJECT_DIR$/examples/marketing-narrow.html" />
-        <option value="$PROJECT_DIR$/examples/signin.html" />
-        <option value="$PROJECT_DIR$/examples/starter-template.html" />
         <option value="$PROJECT_DIR$/examples/sticky-footer.html" />
         <option value="$PROJECT_DIR$/base-css.php" />
         <option value="$PROJECT_DIR$/templates/base-css.html" />
@@ -79,6 +84,10 @@
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/lib/database.php" />
+        <option value="$PROJECT_DIR$/lib/Database.php" />
+        <option value="$PROJECT_DIR$/lib/GripModel.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -143,7 +152,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -156,7 +165,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cellar-CanJS-Bootstrapped" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Grip" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
@@ -290,11 +299,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/globalinstances.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/globaldata.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -305,23 +309,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base-css.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="81" selection-start="548" selection-end="548" vertical-scroll-proportion="0.1640159">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="264" selection-end="344" vertical-scroll-proportion="0.08946322">
           <folding />
         </state>
       </provider>
@@ -391,7 +381,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="827" selection-end="827" vertical-scroll-proportion="0.36253777">
+        <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.01510574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="21" selection-start="363" selection-end="367" vertical-scroll-proportion="-15.0">
+          <folding>
+            <element signature="e#6#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/GripModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="388" selection-end="388" vertical-scroll-proportion="-15.625">
+          <folding>
+            <element signature="e#6#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="2" selection-start="459" selection-end="459" vertical-scroll-proportion="0.19383697">
           <folding />
         </state>
       </provider>

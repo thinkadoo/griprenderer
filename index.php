@@ -11,6 +11,13 @@ require("lib/globaldata.php");
 require("lib/globalinstances.php");
 require("lib/utilities.php");
 require_once("lib/main.php");
+require_once("lib/GripModel.php");
+
+//$grip = new GripModel();
+//$boreHoles = $grip->getBorehole(11);
+//$boreHoles = $grip->getBoreholes();
+//print_r($boreHoles);
+//die();
 
 $main = new Main();
 $messages = $main->getVars();
