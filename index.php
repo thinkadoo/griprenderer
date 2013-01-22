@@ -13,11 +13,16 @@ require("lib/utilities.php");
 require_once("lib/main.php");
 require_once("lib/GripModel.php");
 
-//$grip = new GripModel();
-//$boreHoles = $grip->getBorehole(11);
-//$boreHoles = $grip->getBoreholes();
-//print_r($boreHoles);
-//die();
+$grip = new GripModel();
+//$data = $grip->getBorehole(11);
+//$data = $grip->getBoreholes();
+//$data = $grip->getHAreas();
+//$data = $grip->getDistricts();
+//$data = $grip->getCatchments();
+$data = $grip->getMunicipalityFromDistrict(3);
+echo "<pre>";
+print_r($data);
+die();
 
 $main = new Main();
 $messages = $main->getVars();
