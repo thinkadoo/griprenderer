@@ -38,7 +38,7 @@ class GripModel
     }
 
     public function getBorehole($id) {
-        $sql = "SELECT * FROM boreholes WHERE pid=:id";
+        $sql = "SELECT * FROM boreholes WHERE id=:id";
         try {
             $db = $this->dbo->getConnection();
             $stmt = $db->prepare($sql);
@@ -125,22 +125,13 @@ class GripModel
 
     }
 
-    /*
-case "municipality":{
-if($from == "district")
-{
-$data["municipality"] = q("SELECT id, name FROM municipality WHERE districtID IN ".$id." ORDER BY name ASC");
-}
-if($from == "h_area")
-{
-    $tmpHID = commaBuilder(q("SELECT id, '' FROM h_area WHERE id IN ".$id." ORDER BY id ASC"));
-    $tmpBID = commaBuilder(q("SELECT DISTINCT(municipality), '' FROM boreholes WHERE h_area IN ".$tmpHID." ORDER BY municipality ASC"));
+    public function getMunicipalityFromCatchment($id) {
 
-    $data["municipality"] = q("SELECT id, name FROM municipality WHERE id IN ".$tmpBID." ORDER BY name ASC");
-}
-break;
-}
-    */
+
+
+    }
+
+
 
 
 }

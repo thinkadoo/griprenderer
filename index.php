@@ -14,15 +14,16 @@ require_once("lib/main.php");
 require_once("lib/GripModel.php");
 
 $grip = new GripModel();
-//$data = $grip->getBorehole(11);
+//$data = $grip->getBorehole("2228DCV0008");
 //$data = $grip->getBoreholes();
 //$data = $grip->getHAreas();
 //$data = $grip->getDistricts();
 //$data = $grip->getCatchments();
-$data = $grip->getMunicipalityFromDistrict(3);
-echo "<pre>";
-print_r($data);
-die();
+//$data = $grip->getMunicipalityFromDistrict(3);
+
+//echo "<pre>";
+//print_r($data);
+//die();
 
 $main = new Main();
 $messages = $main->getVars();
@@ -31,9 +32,9 @@ $messages = $main->getVars();
 $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
 
 $template = $twig->loadTemplate('index.html');
-$buffer = $template->render(array('name' => $name, 'navigation' => $navigation, 'messages' => $messages));
+$buffer = $template->render(array('name' => $name, 'navigation' => $navigation, 'messages' => $messages, 'data'=>$data));
 
-//renderHTML($buffer,'index.html');
+renderHTML($buffer,'index.html');
 
 //renderPDF($buffer,'index.pdf');
 
