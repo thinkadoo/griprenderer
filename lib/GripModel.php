@@ -101,6 +101,38 @@ class GripModel
 
     }
 
+    public function getMunicipalities() {
+
+        $sql = "SELECT * FROM municipality";
+        try {
+            $db = $this->dbo->getConnection();
+            $stmt = $db->query($sql);
+            $municipalities = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $this->dbo->closeConnection();
+            $db = null;
+            return $municipalities;
+        } catch(PDOException $e) {
+            return $e->getMessage();
+        }
+
+    }
+
+    public function getSettlements() {
+
+        $sql = "SELECT * FROM settlement";
+        try {
+            $db = $this->dbo->getConnection();
+            $stmt = $db->query($sql);
+            $settlements = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $this->dbo->closeConnection();
+            $db = null;
+            return $settlements;
+        } catch(PDOException $e) {
+            return $e->getMessage();
+        }
+
+    }
+
     public function getMunicipalityFromDistrict($id) {
 
         $sql = "SELECT * FROM municipality WHERE districtID=:id";

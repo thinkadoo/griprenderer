@@ -11,7 +11,6 @@ require("lib/globaldata.php");
 require("lib/globalinstances.php");
 require("lib/utilities.php");
 require_once("lib/main.php");
-require_once("lib/GripModel.php");
 
 $main = new Main();
 $messages = $main->getVars();

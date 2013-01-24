@@ -12,34 +12,87 @@ require("lib/utilities.php");
 require_once("lib/main.php");
 require_once("lib/GripModel.php");
 
-$grip = new GripModel();
+//$grip = new GripModel();
 //$data = $grip->getBorehole("2228DCV0008");
-$data = $grip->getBoreholes();
+//$data = $grip->getBoreholes();
 //$data = $grip->getHAreas();
 //$data = $grip->getDistricts();
 //$data = $grip->getCatchments();
+//$data = $grip->getMunicipalities();
+//$data = $grip->getSettlements();
 //$data = $grip->getMunicipalityFromDistrict(3);
 
-foreach ($data as $borehole){
+$grip = new GripModel();
 
-    $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
+$data = $grip->getBoreholes();
 
-    $template = $twig->loadTemplate('borehole.html');
-    $buffer = $template->render(array('navigation' => $navigation, 'data'=>$borehole));
+$hareas = $grip->getHAreas();
+$districts = $grip->getDistricts();
+$catchments = $grip->getCatchments();
+$municipalities = $grip->getMunicipalities();
+$settlements = $grip->getSettlements();
 
-    renderHTML($buffer,$borehole->id.'.html');
+/*echo"<pre>";
+print_r($data);
+die();*/
+
+
+// Render all the Borehole Detail Pages
+
+function renderBoreholeDetails($data,$municipalities,$settlements,$hareas){
+
+global $twig;
+
+    foreach ($data as $borehole){
+
+        $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
+
+        $borehole->municipality = $municipalities[$borehole->municipality]->name;
+        $borehole->settlement = $settlements[$borehole->settlement]->SetlName;
+        $borehole->h_area = $hareas[(int)$borehole->h_area]->name;
+
+        $template = $twig->loadTemplate('boreholedetail.html');
+        $buffer = $template->render(array('navigation' => $navigation, 'data'=>$borehole));
+
+        renderHTML($buffer,$borehole->id.'.html');
+    }
 }
 
+renderBoreholeDetails($data,$municipalities,$settlements,$hareas);
 
-die();
+// Wrangle the Data and build an List Page
 
 
+$data = $grip->getBoreholes();
+/*echo"<pre>";
+print_r($municipalities);
+die();*/
+
+function prepareData($data,$municipalities,$settlements,$hareas){
+
+    $boreholeList = array();
+
+    foreach ($data as $borehole){
+        if ($borehole->municipality = 13){
+            $borehole->municipality = $municipalities[$borehole->municipality]->name;
+            $borehole->settlement = $settlements[$borehole->settlement]->SetlName;
+            $borehole->h_area = $hareas[(int)$borehole->h_area]->name;
+            $boreholeList [] = $borehole;
+        }
+    }
+
+    return $boreholeList;
+}
+
+$boreholeList = prepareData($data,$municipalities,$settlements,$hareas);
+
+$message =  "I rendered ".count($data)." pages for you :)";
 
 // VARS passed to TWIG to change the persistent menu bar
 $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
 
 $template = $twig->loadTemplate('borehole.html');
-$buffer = $template->render(array('navigation' => $navigation, 'data'=>$data));
+$buffer = $template->render(array('navigation' => $navigation, 'message'=>$message, 'hareas'=>$hareas, 'districts'=>$districts, 'catchments'=>$catchments, 'boreholelist'=>$boreholeList, 'municipalities'=>$municipalities, 'settlements'=>$settlements));
 
 renderHTML($buffer,'borehole.html');
 
