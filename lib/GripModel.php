@@ -119,7 +119,7 @@ class GripModel
 
     public function getSettlements() {
 
-        $sql = "SELECT * FROM settlement";
+        $sql = "SELECT * FROM settlements";
         try {
             $db = $this->dbo->getConnection();
             $stmt = $db->query($sql);

@@ -7,6 +7,14 @@
 
 <hr>
 
+
+    <h2>Borehole List</h2>
+    {% for item in boreholelist %}
+    <li class=""><a href="html/{{ item.bh }}.html">{{ item.id }} - {{ item.fno }} - {{ item.municipality }} - {{ item.settlement }} - {{ item.h_area }} - {{ item.district }}</a></li>
+    {% endfor %}
+
+    <hr>
+
     <h2>Districts</h2>
     {% for item in districts %}
     <li class=""><a href="">{{ item.id }} - {{ item.name }}</a></li>
@@ -37,14 +45,7 @@
 
     <h2>Settlements</h2>
     {% for item in settlements %}
-    <li class=""><a href="">{{ item.id }} - {{ item.SetlName }}</a></li>
-    {% endfor %}
-
-    <hr>
-
-    <h2>Borehole List</h2>
-    {% for item in boreholelist %}
-    <li class=""><a href="html/{{ item.id }}.html">{{ item.id }} - {{ item.fno }} - {{ item.municipality }} - {{ item.settlement }} - {{ item.h_area }}</a></li>
+    <li class=""><a href="">{{ item.id }} - {{ item.name }}</a></li>
     {% endfor %}
 
 </div>

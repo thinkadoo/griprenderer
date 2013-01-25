@@ -33,13 +33,13 @@ $municipalities = $grip->getMunicipalities();
 $settlements = $grip->getSettlements();
 
 /*echo"<pre>";
-print_r($data);
+print_r($settlements);
 die();*/
 
 
 // Render all the Borehole Detail Pages
 
-function renderBoreholeDetails($data,$municipalities,$settlements,$hareas){
+function renderBoreholeDetails($data,$municipalities,$settlements,$hareas,$districts){
 
 global $twig;
 
@@ -47,18 +47,19 @@ global $twig;
 
         $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
 
-        $borehole->municipality = $municipalities[$borehole->municipality]->name;
-        $borehole->settlement = $settlements[$borehole->settlement]->SetlName;
+        $borehole->municipality = $municipalities[(int)$borehole->municipality]->name;
+        $borehole->settlement = $settlements[(int)$borehole->settlement]->name;
         $borehole->h_area = $hareas[(int)$borehole->h_area]->name;
+        $borehole->district = $districts[(int)$borehole->district]->name;
 
         $template = $twig->loadTemplate('boreholedetail.html');
         $buffer = $template->render(array('navigation' => $navigation, 'data'=>$borehole));
 
-        renderHTML($buffer,$borehole->id.'.html');
+        renderHTML($buffer,$borehole->bh.'.html');
     }
 }
 
-renderBoreholeDetails($data,$municipalities,$settlements,$hareas);
+renderBoreholeDetails($data,$municipalities,$settlements,$hareas,$districts);
 
 // Wrangle the Data and build an List Page
 
@@ -68,15 +69,20 @@ $data = $grip->getBoreholes();
 print_r($municipalities);
 die();*/
 
-function prepareData($data,$municipalities,$settlements,$hareas){
+function prepareData($data,$municipalities,$settlements,$hareas,$districts){
 
     $boreholeList = array();
 
     foreach ($data as $borehole){
-        if ($borehole->municipality = 13){
-            $borehole->municipality = $municipalities[$borehole->municipality]->name;
-            $borehole->settlement = $settlements[$borehole->settlement]->SetlName;
+
+        //if ((int)$borehole->settlement != 0 && (int)$borehole->settlement != null && (int)$borehole->settlement == 2454 ){
+        if ((int)$borehole->settlement == 242 ){
+
+            $borehole->municipality = $municipalities[(int)$borehole->municipality]->name;
+            $borehole->settlement = $settlements[(int)$borehole->settlement]->name;
             $borehole->h_area = $hareas[(int)$borehole->h_area]->name;
+            $borehole->district = $districts[(int)$borehole->district]->name;
+
             $boreholeList [] = $borehole;
         }
     }
@@ -84,7 +90,7 @@ function prepareData($data,$municipalities,$settlements,$hareas){
     return $boreholeList;
 }
 
-$boreholeList = prepareData($data,$municipalities,$settlements,$hareas);
+$boreholeList = prepareData($data,$municipalities,$settlements,$hareas,$districts);
 
 $message =  "I rendered ".count($data)." pages for you :)";
 
@@ -92,7 +98,7 @@ $message =  "I rendered ".count($data)." pages for you :)";
 $navigation[0] = array('href' => 'index.php', 'caption' => 'Home', 'class'=>'active');
 
 $template = $twig->loadTemplate('borehole.html');
-$buffer = $template->render(array('navigation' => $navigation, 'message'=>$message, 'hareas'=>$hareas, 'districts'=>$districts, 'catchments'=>$catchments, 'boreholelist'=>$boreholeList, 'municipalities'=>$municipalities, 'settlements'=>$settlements));
+$buffer = $template->render(array('navigation' => $navigation, 'message'=>$message, 'boreholelist'=>$boreholeList, 'hareas'=>$hareas , 'districts'=>$districts, 'catchments'=>$catchments, 'municipalities'=>$municipalities, 'settlements'=>$settlements ));
 
 renderHTML($buffer,'borehole.html');
 
