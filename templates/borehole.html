@@ -10,7 +10,7 @@
 
     <h2>Borehole List</h2>
     {% for item in boreholelist %}
-    <li class=""><a href="html/{{ item.bh }}.html">{{ item.id }} - {{ item.fno }} - {{ item.municipality }} - {{ item.settlement }} - {{ item.h_area }} - {{ item.district }}</a></li>
+    <li class=""><a href="html/{{ item.bh }}.html">{{ item.id }} - {{ item.bh }} - {{ item.fno }} - {{ item.municipality }} - {{ item.settlement }} - {{ item.h_area }} - {{ item.district }}</a></li>
     {% endfor %}
 
     <hr>

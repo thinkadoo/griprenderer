@@ -6,10 +6,10 @@
  * Time: 2:54 PM
  */
 
-require("lib/globaldata.php");
+require_once 'vendor/autoload.php';
+
 require("lib/globalinstances.php");
 require("lib/utilities.php");
-require_once("lib/main.php");
 require_once("lib/GripModel.php");
 
 //$grip = new GripModel();

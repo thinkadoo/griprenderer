@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--
+******************************************************
+ * Title: 						Index HTML
+ * For: 						GRIP Limpopo Website
+ * Author:						Christian Von
+ * Version:						1.0
+ * Date Created:				2012/11/12
+ * Last Modified:				2012/12/10
+******************************************************
+-->
+<html><head>
+	<title>GRIP Limpopo | Aganang</title>
+	<link rel="shortcut icon" href="im/favicon.png" >
+
+	<!-- BEGIN: METATAGS -->
+	<meta charset="UTF-8" />
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<!-- END: METATAGS -->
+
+	<!-- BEGIN: HTML 5 -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- END: HTML 5 -->
+
+	<!-- BEGIN: STYLESHEET -->
+    <link href='../styles.css' rel='stylesheet' type='text/css'/>
+	<!--[if IE]><link rel="stylesheet" href="../ie/ie.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if !IE]><!--><link href='../css/test.css' rel='stylesheet' type='text/css'/><!--<![endif]-->
+	<!-- END: STYLESHEET -->
+
+	<!-- BEGIN: INCLUDES -->
+	<script language='JavaScript' src='../include/analytics.js'></script>
+	<script language='JavaScript' src='../include/jquery.js'></script>
+	<script language='JavaScript' src='../include/validation.js'></script>
+	<script language='JavaScript' src='../include/templateMapBuilder.js'></script>
+	<script language='JavaScript' src='../include/templateMaps.js'></script>
+	<script language='JavaScript' src='../include/templateSearchFunc.js'></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!-- END: INCLUDES -->
+
+
+</head><body>
+
+	<div id="back-top">
+		<a href="#top"><span>to top &#9650;</span></a>
+	</div>
+
+	<header>
+		<div class="logo"></div>
+		<div class="google-box">
+			<form method="get" action="http://www.google.com/search"> <input type="text" name="q" size="31" maxlength="255" value="" /> <input type="submit" value="Google Search" /> <input type="radio" name="sitesearch" value="askdavetaylor.com" checked /> Ask Dave Taylor<br />
+			</form>
+		</div>
+	</header>
+	<div class="header-blue"></div>
+
+	<nav>
+		<ul id="menu">
+			<li class="page_fade"><a href="index.html">Home</a></li>
+			<li class="page_fade"><a href="history.html">History</a></li>
+			<li class="page_fade"><a href="about.html">About</a>
+				<ul>
+					<li><a href="about.html#vision"><i>our</i>Vision</a></li>
+					<li><a href="about.html#mission"><i>our</i>Mission</a></li>
+					<li><a href="about.html#monetary">MONETARY VALUE</a></li>
+				</ul>
+			</li>
+			<li class="page_fade"><a href="success.html">Success <i>Stories</i></a>
+				<ul>
+					<li><a href="success.html#mwamitwa">Mwamitwa <i>Project</i></a></li>
+					<li><a href="success.html#glenalpine">Glen Alpine<i>1998 1999</i></a></li>
+					<li><a href="success.html#thamalang">Thamalang <i>Project</i></a></li>
+					<li><a href="success.html#midletaba">Middle Letaba Dam</a></li>
+				</ul>
+			</li>
+			<li class="page_fade"><a href="benefits.html">Benefits</a></li>
+			<li class="page_fade"><a href="http://www.griplimpopo.co.za/gripdocuments">Documents</a></li>
+
+			<!--[if !IE]><!--><div id="menu-right"><!--<![endif]-->
+			<li class="page_fade"><a href="contribute.php">Contribute</a></li>
+			<li class="page_fade"><a href="contact.php">Contact</a></li>
+			<!--[if !IE]><!--></div><!--<![endif]-->
+		</ul>
+	</nav>
+
+	<div class="header-social">
+		<div id="twitter">
+			<div id="ticker" class="query"></div>
+		</div>
+		<!-- pageslider -->
+		<a href="javascript:$.pageslide({ direction: 'left', href: '_secondary.html' })">
+			<div id="howitworks"></div>
+		</a>
+		<!-- pageslider -->
+		<!-- pageslider -->
+		<div id="content">
+	        <div id="modal">
+	            <h2>Modal</h2>
+
+	            <p><a href="javascript:$.pageslide.close()">Close</a></p>
+	        </div>
+	    </div>
+		<!-- pageslider -->
+	</div>
+
+	<!--
+	<div class="header-slider">
+
+	</div>
+	-->
+
+	<div class="container">
+
+		<aside>
+			<div class="level-1">
+				<ul id="tabbed" class="tabbed">
+					<li id="tab-1" class="active"><a href="#sub1">Districts</a></li>
+					<li id="tab-2"><a href="#sub2">H-Area</a></li>
+					<li id="tab-3"><a href="#sub3">Quat</a></li>
+				</ul>
+
+				<div id="sub1" class="content">
+					<div class="tab-content">
+						<!-- District BEGIN -->
+						<select multiple id="district" name="district[]" tabindex="">
+						</select>
+						<div class="aside-buttons">
+							<input class="icn-select" type="button" id="btnSelectAllDistrict" name="btnSelectAll" value=""/>
+							<input class="icn-unselect" type="button" id="btnDeSelectAllDistrict" name="btnDeSelectAll" value=""/>
+							<input class="icn-refine" type="button" id="btnRefineDistrict" name="btnRefine" value=""/>
+							<input class="icn-report" type="button" id="btnReportDistrict" name="btnReport" value=""/>
+							<input class="icn-map" type="button" id="btnMapDistrict" name="btnMap" value=""/>
+						</div>
+						<!-- District END -->
+					</div>
+				</div>
+
+				<div id="sub2" class="content">
+					<div class="tab-content">
+						<!-- H-area BEGIN -->
+						<select multiple id="h_area" name="h_area[]" tabindex="">
+						</select>
+						<div class="aside-buttons">
+							<input class="icn-select" type="button" id="btnSelectAllArea" name="btnSelectAll" value=""/>
+							<input class="icn-unselect" type="button" id="btnDeSelectAllArea" name="btnDeSelectAll" value=""/>
+							<input class="icn-refine" type="button" id="btnRefineArea" name="btnRefine" value=""/>
+							<input class="icn-report" type="button" id="btnReportArea" name="btnReport" value=""/>
+							<input class="icn-map" type="button" id="btnMapArea" name="btnMap" value=""/>
+						</div>
+						<!-- H-area END -->
+					</div>
+				</div>
+
+				<div id="sub3" class="content">
+					<div class="tab-content">
+						<!-- Quat BEGIN -->
+						<select multiple id="quat" name="quat[]" tabindex="">
+						</select>
+						<div class="aside-buttons">
+							<input class="icn-select" type="button" id="btnSelectAllQuat" name="btnSelectAll" value=""/>
+							<input class="icn-unselect" type="button" id="btnDeSelectAllQuat" name="btnDeSelectAll" value=""/>
+							<input class="icn-refine" type="button" id="btnRefineQuat" name="btnRefine" value=""/>
+							<input class="icn-report" type="button" id="btnReportQuat" name="btnReport" value=""/>
+							<input class="icn-map" type="button" id="btnMapQuat" name="btnMap" value=""/>
+						</div>
+						<!-- Quat END -->
+					</div>
+				</div>
+				<div class="steps">1</div>
+			</div>
+
+			<div class="level-2">
+				<h3>Municipalities</h3><!-- Municipality BEGIN -->
+				<select multiple id="municipality" name="municipality[]" tabindex="">
+				</select>
+				<div class="aside-buttons">
+					<input class="icn-select" type="button" id="btnSelectAllMunicipality" name="btnSelectAll" value=""/>
+					<input class="icn-unselect" type="button" id="btnDeSelectAllMunicipality" name="btnDeSelectAll" value=""/>
+					<input class="icn-refine" type="button" id="btnRefineMunicipality" name="btnRefine" value=""/>
+					<input class="icn-report" type="button" id="btnReportMunicipality" name="btnReport" value=""/>
+					<input class="icn-map" type="button" id="btnMapMunicipality" name="btnMap" value=""/>
+				</div>
+				<div class="steps">2</div>
+				<!-- Municipality END -->
+			</div>
+
+			<div class="level-3">
+				<h3>Settlements</h3><!-- Settlements BEGIN -->
+				<select multiple id="settlement" name="settlement[]" tabindex="">
+				</select>
+				<div class="aside-buttons">
+					<input class="icn-select" type="button" id="btnSelectAllSettlement" name="btnSelectAll" value=""/>
+					<input class="icn-unselect" type="button" id="btnDeSelectAllSettlement" name="btnDeSelectAll" value=""/>
+					<input class="icn-refine" type="button" id="btnRefineSettlement" name="btnRefine" value=""/>
+					<input class="icn-report" type="button" id="btnReportSettlement" name="btnReport" value=""/>
+					<input class="icn-map" type="button" id="btnMapSettlement" name="btnMap" value=""/>
+				</div>
+				<div class="steps">3</div>
+				<!-- Settlements END -->
+			</div>
+
+			<div class="level-4">
+				<h3>Boreholes</h3><!-- Geo BEGIN -->
+				<select multiple id="borehole" name="borehole[]" tabindex="">
+				</select>
+				<div class="aside-buttons">
+					<input class="icn-select" type="button" id="btnSelectAllBorehole" name="btnSelectAll" value=""/>
+					<input class="icn-unselect" type="button" id="btnDeSelectAllBorehole" name="btnDeSelectAll" value=""/>
+					<input class="icn-refine" type="button" id="btnRefineBorehole" name="btnRefine" value=""/>
+					<input class="icn-report" type="button" id="btnReportBorehole" name="btnReport" value=""/>
+					<input class="icn-map" type="button" id="btnMapBorehole" name="btnMap" value=""/>
+				</div>
+				<div class="steps">4</div>
+				<!-- Geo END -->
+			</div>
+
+			<div class="space"></div>
+		</aside>
+
+		<div id="report" style="display: block"><!-- MAP/REPORT: BEGIN -->
+		<section>
+			<h1>
+				<span id="mine">&nbsp;</span>
+				Map <i>and</i> Report
+			</h1>
+
+			<article>
+				<h4>Boreholes in Smashblock: <i id="count"></i></h4>
+				<div id='map_canvas' style="width: 100%; min-height: 500px; border: solid 1px black; background: #CCC;"></div>
+				&nbsp;
+				<h3 id='demo_set_view'>Click on a <i>borehole</i> to see more information for that borehole.</h3>
+				<form name="export" action="../toExcel.php" method="post" value="">
+					<input type="text" id="excelData" name="excelData" style="display: none"> <!-- hidden field to send ids to excel builder -->
+					<p><input type="submit" id="toExcel" value="Export Data"> Boreholes in Smashblock: <i id="export_count"></i></p>
+				</form>
+			</article>
+
+			<article id="borehole_article_data" style="display: none;">
+				<table>
+					<thead>
+						<th colspan = 3>Data for borehole:</th>
+					</thead>
+					<tbody id='demo'></tbody>
+				</table>
+
+				&nbsp;
+				&nbsp;&nbsp;
+				&nbsp;
+
+				<table>
+					<thead>
+						<th colspan = 5>ALTERNATIVE SETTLEMENT NAMES:</th>
+					</thead>
+					<tbody id='hist'></tbody>
+				</table>
+			</article>
+		</section>
+		</div><!-- MAP/REPORT: END -->
+
+		<div id="webData" style="display: block"><!-- USED TO CONROLL FLOW: BEGIN -->
+		<section>
+		<input type="hidden" value="settlement" id="tableName"/>
+		<input type="hidden" value="(2592)" id="tableID"/>
+		<h1>
+			<span id="benefitsgrip">&nbsp;</span>
+			BOREHOLES in Smashblock
+		</h1>
+			<article>
+			<table>
+				<thead>
+					<tr><th colspan="2">Boreholes:</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><a href="http://localhost/newgrip/newGrip_v3/newGrip/html/h07_0228.html">H07-0228</a><td></tr>
+					<tr><td><a href="">H07-0227</a><td></tr>
+					<tr><td><a href="">H07-0225</a><td></tr>
+					<tr><td><a href="">H07-0224</a><td></tr>
+					<tr><td><a href="">H07-0223</a><td></tr>
+				</tbody>
+			</table>
+			</article>
+		</section>
+		</div><!-- USED TO CONROLL FLOW: END -->
+
+		<div class="space"></div>
+	</div>
+
+	<footer>
+		<div class="footer">
+			<div class="footer-block">
+				<h6>Success <i>Stories</i></h6>
+				<ul>
+					<li><a href="success.html#mwamitwa">MWAMITWA PROJECT</a></li>
+					<li><a href="success.html#glenalpine">GLEN ALPINE 1998 1999</a></li>
+					<li><a href="success.html#thamalang">THAMALANG AREA PROJECT</a></li>
+				</ul>
+			</div>
+			<div class="footer-block">
+				<h6>Information <i>system</i></h6>
+				<ul>
+					<li><a href="http://www.griplimpopo.co.za/districts.html">Districts</a></li>
+					<li><a href="http://www.griplimpopo.co.za/hareas.html">H-areas</a></li>
+					<li><a href="http://www.griplimpopo.co.za/templates/quaternary.html">Quaternary catchments</a></li>
+				</ul>
+			</div>
+			<div class="footer-block">
+				<h6><i>About</i> Grip</h6>
+				<ul>
+					<li><a href="about.html#vision"><span>GRIP</span><i>Vision</i></a></li>
+					<li><a href="about.html#mission"><span>GRIP</span><i>Mission</i></a></li>
+					<li><a href="about.html#monetary"><i>THE </i>MONETARY VALUE</a></li>
+				</ul>
+			</div>
+			<div class="footer-block">
+				<a href="http://www.dwaf.gov.za/" target="blank"><div class="DWA-logo"></div></a>
+			</div>
+		</div>
+
+		<div class="space"></div>
+
+		<div id="copyright">
+			Copyright &copy; 2012 <a href="http://griplimpopo.co.za/">GRIP Limpopo</a>. All Rights Reserved.
+			<p>
+				Although the Department of Water affairs exercise due care and diligence in providing accurate
+				information, the user needs to note that the information provided on this website is in an ongoing
+				verification process. The Department of Water affairs therefore accepts no liability, and the
+				user, by using this website, indemnifies the Department of Water affairs, the GRIP Limpopo
+				team and its consultants against all actions, claims, demands, losses, liabilities, costs, damages
+				and expenses arising from or in connection with information supplied, directly or indirectly by the
+				Department of Water affairs and by the use of the information contained on this website.
+			</p>
+		</div>
+
+		<div class="copyright">
+			<div class="copyright-logo">
+				<a class="ite" href="http://iteonline.co.za/index.html"></a>
+				<span>
+					<a href="http://www.facebook.com/pages/Integrity-Engineering-PTY-LTD/276292199059390" target="_blank" class="fb"></a>
+					<a href="https://twitter.com/?utm_campaign=ITE_online&utm_content=137424815643561984&utm_medium=fb&utm_source=fb#!/ITE_online" target="_blank" class="tw"></a>
+					<a href="http://za.linkedin.com/company/integrity-engineering-ite-?trk=ppro_cprof" target="_blank" class="li"></a>
+				</span>
+			</div>
+			<div class="copyright-text">built and powered by:</div>
+		</div>
+	</footer>
+
+	<!-- BEGIN: JQUERY -->
+	<script type="text/javascript" src="../jq/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../jq/jquery.ite.js"></script>
+
+	<script src="../jq/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// <![CDATA[
+
+		$(document).ready(function () {
+			$('#tabbed').tabify();
+		});
+
+		// ]]>
+	</script>
+	<!-- Twitter Feed -->
+	<script type="text/javascript" src="../jq/jquery.tweet.js"></script>
+	<!-- Twitter Feed -->
+	<script src="../jq/jquery.pageslide.min.js"></script>
+	<!-- END: JQUERY -->
+</body></html>
